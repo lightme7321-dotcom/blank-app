@@ -12,17 +12,18 @@ usuarios_registrados = {
 # Inventario inicial
 if "inventario" not in st.session_state:
     st.session_state.inventario = [
-        ["Máquina de espresso", "1001", "maquinaria", "N/A", 2],
-        ["Molinillo de café", "1002", "maquinaria", "N/A", 3],
-        ["Granos de café (variedad)", "2001", "materia prima", "N/A", 50],
+        ["Máquina de espresso", "1001", "implementos de preparación", "N/A", 2],
+        ["Molinillo de café", "1002", "implementos de preparación", "N/A", 3],
+        ["Granos de café (variedad)", "2001", "ingredientes", "N/A", 50],
         ["Café americano", "3002", "producto terminado", "terminado", 25],
     ]
     st.session_state.lista_cambios = []
 
-categorias = {"maquinaria", "materia prima", "producto terminado", "en proceso"}
+# Categorías actualizadas
+categorias = {"implementos de preparación", "ingredientes", "producto terminado", "en proceso"}
 
 # ---- LOGIN ----
-st.title("☕ Bienvenido a la Cafetería 'Cafecito' ☕")
+st.title("☕ Bienvenido a la herramienta de inventario para cafeterías Pystock' ☕")
 
 doc = st.text_input("Ingrese su número de documento:")
 if doc:
